@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- UNIT 1: HTML document structure + SEO fundamentals -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TransitVoice helps public transport passengers report service issues, rate journeys and track feedback.">
+  <meta name="keywords" content="public transport, passenger feedback, bus complaints, TransitVoice">
+  <meta name="author" content="TransitVoice Student Project">
+  <meta name="theme-color" content="#102b46">
+  <title>TransitVoice | Public Transport Feedback Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- UNIT 2: Semantic HTML page structure -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="TransitVoice home">
+      <span class="brand-mark">T</span> Transit<span class="brand-blue">Voice</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#track">Track report</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+    <a class="header-button" href="#feedback">Report an issue <span aria-hidden="true">↗</span></a>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR VOICE CAN IMPROVE EVERY JOURNEY</p>
+        <h1 id="hero-title">Better journeys<br><span>begin with you.</span></h1>
+        <p class="hero-description">A simple place to report public transport problems, share your experience and help make local services better for everyone.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#feedback">Share feedback <span aria-hidden="true">→</span></a>
+          <a class="button button-light" href="#about">Explore the portal</a>
+        </div>
+        <p class="hero-caption">Designed for passengers. Built for better public transport.</p>
+      </div>
+
+      <div class="hero-visual">
+        <!-- UNIT 1: Inline SVG graphic -->
+        <svg class="route-art" viewBox="0 0 460 330" role="img" aria-labelledby="routeTitle routeDesc">
+          <title id="routeTitle">Illustration of a city bus route</title>
+          <desc id="routeDesc">A blue bus travelling between three public transport stops.</desc>
+          <circle cx="235" cy="160" r="135" fill="#e3efff"/>
+          <path d="M35 230 C100 40 260 45 420 190" fill="none" stroke="#8fb8ed" stroke-width="3" stroke-dasharray="8 9"/>
+          <circle cx="70" cy="176" r="9" fill="#2b69dc"/><circle cx="390" cy="205" r="9" fill="#2b69dc"/>
+          <rect x="87" y="112" width="286" height="132" rx="22" fill="#ffffff" stroke="#dce8f5" stroke-width="3"/>
+          <path d="M105 145 Q105 130 122 130 H345 Q357 130 357 147 V194 H105Z" fill="#b9d9f2"/>
+          <rect x="119" y="141" width="62" height="43" rx="6" fill="#dff2fb"/>
+          <rect x="190" y="141" width="62" height="43" rx="6" fill="#dff2fb"/>
+          <rect x="261" y="141" width="62" height="43" rx="6" fill="#dff2fb"/>
+          <rect x="330" y="142" width="27" height="53" rx="7" fill="#dff2fb"/>
+          <rect x="104" y="202" width="255" height="25" rx="5" fill="#2b69dc"/>
+          <text x="130" y="120" font-size="10" font-weight="700" fill="#163653" letter-spacing="2">CITY TRANSIT</text>
+          <circle cx="151" cy="244" r="20" fill="#20374d"/><circle cx="151" cy="244" r="9" fill="#aab8c7"/>
+          <circle cx="309" cy="244" r="20" fill="#20374d"/><circle cx="309" cy="244" r="9" fill="#aab8c7"/>
+          <rect x="35" y="58" width="110" height="43" rx="10" fill="#fff"/>
+          <text x="50" y="76" font-size="10" fill="#708196">REPORT SENT</text><text x="50" y="91" font-size="12" font-weight="700" fill="#159b75">✓ Received</text>
+          <rect x="310" y="35" width="112" height="43" rx="10" fill="#fff"/>
+          <text x="325" y="53" font-size="10" fill="#708196">PASSENGER RATING</text><text x="325" y="68" font-size="12" font-weight="700" fill="#d99a22">★★★★★</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Portal statistics">
+      <article class="stat-card"><strong id="totalCount">0</strong><span>Reports submitted</span></article>
+      <article class="stat-card"><strong id="resolvedCount">0</strong><span>Reports resolved</span></article>
+      <article class="stat-card"><strong id="averageRating">—</strong><span>Average rating</span></article>
+      <article class="stat-card"><strong>24/7</strong><span>Portal availability</span></article>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <div><p class="eyebrow">ABOUT THE PROJECT</p><h2>A better way to be heard.</h2></div>
+        <p>TransitVoice creates an organized feedback channel between passengers and the people responsible for public transport services.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">↗</span><h3>Report an issue</h3><p>Share route delays, overcrowding, cleanliness and other service concerns.</p></article>
+        <article class="feature-card"><span class="feature-icon">◎</span><h3>Track progress</h3><p>Use a unique report ID to check the latest complaint status.</p></article>
+        <article class="feature-card"><span class="feature-icon">▥</span><h3>Understand feedback</h3><p>Review passenger ratings and identify recurring service problems.</p></article>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="feedback">
+      <div class="section-heading">
+        <div><p class="eyebrow">WE ARE LISTENING</p><h2>Tell us about your trip.</h2></div>
+        <p>Complete the form below. Fields marked with an asterisk are required.</p>
+      </div>
+
+      <!-- UNIT 2: Semantic form, labels, input types and native validation -->
+      <div class="form-layout">
+        <form id="feedbackForm" class="feedback-form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="passengerName">Passenger name <span class="optional">(optional)</span></label>
+              <input type="text" id="passengerName" name="passengerName" maxlength="50" placeholder="Your name" autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email address <span class="optional">(optional)</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="route">Bus route <span class="required">*</span></label>
+              <select id="route" name="route" required>
+                <option value="">Select a route</option>
+                <option>Route 01 - City Centre</option>
+                <option>Route 02 - University</option>
+                <option>Route 03 - Railway Station</option>
+                <option>Route 04 - Market Road</option>
+                <option>Route 05 - Hospital</option>
+                <option>Other / Not sure</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="stop">Bus stop <span class="required">*</span></label>
+              <input type="text" id="stop" name="stop" required minlength="2" maxlength="80" placeholder="e.g. Main Market Stop">
+            </div>
+            <div class="form-field">
+              <label for="category">Issue category <span class="required">*</span></label>
+              <select id="category" name="category" required>
+                <option value="">Choose an issue</option>
+                <option>Bus delay</option><option>Overcrowding</option><option>Cleanliness</option>
+                <option>Route change</option><option>Staff behaviour</option><option>Accessibility</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="travelDate">Date of journey</label>
+              <input type="date" id="travelDate" name="travelDate">
+            </div>
+          </div>
+          <fieldset class="rating-field">
+            <legend>Rate your journey <span class="required">*</span></legend>
+            <div class="star-picker" id="starPicker" aria-label="Journey rating">
+              <button type="button" data-rating="1" aria-label="1 star">★</button>
+              <button type="button" data-rating="2" aria-label="2 stars">★</button>
+              <button type="button" data-rating="3" aria-label="3 stars">★</button>
+              <button type="button" data-rating="4" aria-label="4 stars">★</button>
+              <button type="button" data-rating="5" aria-label="5 stars">★</button>
+            </div>
+            <span id="ratingText" class="rating-text">Select 1 to 5 stars</span>
+          </fieldset>
+          <div class="form-field">
+            <label for="description">Describe the issue <span class="required">*</span></label>
+            <textarea id="description" name="description" rows="4" minlength="10" maxlength="600" required placeholder="Tell us what happened..."></textarea>
+            <small>Minimum 10 characters. Maximum 600 characters.</small>
+          </div>
+          <div class="form-field">
+            <label for="attachment">Attach an image <span class="optional">(optional)</span></label>
+            <input type="file" id="attachment" name="attachment" accept="image/*">
+            <small>Demo only: the selected filename is recorded; no image is uploaded.</small>
+          </div>
+          <label class="consent-line"><input type="checkbox" id="confirmDetails" required> I confirm that the information above is accurate.</label>
+          <button class="button button-primary submit-button" type="submit">Submit feedback <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="form-aside">
+          <div class="aside-symbol">✦</div>
+          <h3>Your feedback<br>moves us forward.</h3>
+          <p>Each report is stored in this browser's demo dashboard so you can see how a feedback system works.</p>
+          <ol class="steps-list">
+            <li><span>01</span> Select your route and stop</li>
+            <li><span>02</span> Describe and rate your journey</li>
+            <li><span>03</span> Save your unique report ID</li>
+          </ol>
+          <div class="note-box"><strong>Project prototype</strong><span>This student demo is not connected to a real transport authority.</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section track-section" id="track">
+      <div class="section-heading">
+        <div><p class="eyebrow">REPORT STATUS</p><h2>Track your report.</h2></div>
+        <p>Enter the unique ID generated after submitting a feedback form.</p>
+      </div>
+      <form id="trackForm" class="track-form">
+        <label class="visually-hidden" for="trackId">Report ID</label>
+        <input id="trackId" type="text" placeholder="Enter report ID, e.g. TV-123456" required>
+        <button class="button button-dark" type="submit">Check status →</button>
+      </form>
+      <div id="trackResult" class="track-result" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="section dashboard-section" id="dashboard">
+      <div class="section-heading">
+        <div><p class="eyebrow">ADMIN VIEW</p><h2>Feedback dashboard.</h2></div>
+        <p>Search, filter and update sample reports. This demonstrates how an administrator could review feedback.</p>
+      </div>
+      <div class="dashboard-tools">
+        <label for="searchReports">Search reports <input id="searchReports" type="search" placeholder="Search ID, route or issue..."></label>
+        <label for="statusFilter">Filter by status
+          <select id="statusFilter"><option value="All">All statuses</option><option>Submitted</option><option>Under Review</option><option>Resolved</option></select>
+        </label>
+        <button id="clearReports" class="clear-button" type="button">Clear demo reports</button>
+      </div>
+
+      <!-- UNIT 2: Data table with caption, thead, tbody and scope -->
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">Passenger feedback reports and their current status</caption>
+          <thead><tr><th scope="col">Report ID</th><th scope="col">Route / Stop</th><th scope="col">Issue</th><th scope="col">Rating</th><th scope="col">Status</th><th scope="col">Update</th></tr></thead>
+          <tbody id="reportTable"><tr><td colspan="6" class="empty-cell">No reports yet. Submit feedback to add the first report.</td></tr></tbody>
+        </table>
+      </div>
+      <p class="demo-disclaimer">Demo limitation: reports are stored locally in this browser using JavaScript Local Storage. A real service needs a secure backend and database.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">T</span> Transit<span class="brand-blue">Voice</span></a>
+    <p>Your journey. Your voice.</p>
+    <a href="#top">Back to top ↑</a>
+    <small>© 2026 TransitVoice · Student project prototype</small>
+  </footer>
+
+  <!-- UNIT 1: HTML5 multimedia element example; optional local audio file -->
+  <details class="audio-demo">
+    <summary>HTML5 multimedia examples (audio, video and iframe)</summary>
+    <p><strong>Audio element:</strong> Add your own royalty-free file named <code>sample-audio.mp3</code> to this folder to enable playback.</p>
+    <audio controls preload="none">
+      <source src="sample-audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p><strong>Video element:</strong> Add your own project demonstration file named <code>sample-video.mp4</code> to this folder to enable playback.</p>
+    <video controls preload="none" width="320" poster="" aria-label="TransitVoice project demonstration video">
+      <source src="sample-video.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+    <p><strong>Iframe element:</strong> The embedded panel below demonstrates how an external or separate page can be displayed inside a webpage.</p>
+    <iframe title="TransitVoice embedded information panel" width="100%" height="100" loading="lazy"
+      srcdoc="&lt;!doctype html&gt;&lt;html lang='en'&gt;&lt;body style='font:14px Arial;padding:12px;background:#f4f8fc;color:#102b46'&gt;&lt;strong&gt;TransitVoice information panel&lt;/strong&gt;&lt;p&gt;A real project could embed an approved route map or transport information page here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+  </details>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
